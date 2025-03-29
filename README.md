@@ -1,9 +1,10 @@
 # cnn_alexnet_brain_tumor
 1.1 Summary
 Using a CNN based on AlexNet architecture to differentiate different types of tumors and those without tumors. This model achieves 82% - 84% validation accuracy on a test data set with more than 1000 photos of tumors.
-
+![Alt text](training_history.png)
 1.2 AlexNet Architecture
 8 total layers, 3 of which are fully connected layers.
+![Alt text](alexnet.png)
 
 Images have to be of size 277x277x3. To resize the tumor images, we simply specify the size in the training function provided by the TensorFlow library.
 C1 has 96 filters of size 11x11 with stride 4. ReLU activation.
@@ -14,6 +15,7 @@ C5 has 256 filters of size 3×3 with padding 1. ReLU activation.
 FC6 and FC7 have 4096 neurons and a 50% dropout rate. ReLU activation.
 FC8 has 1000 neurons and softmax activation.
 1.3 Performance insights
+![Alt text](confusion_matrix.png)
 
 The model’s accuracy and validation loss seem to stabilize after epoch 25. To train the model up to 40 epochs, it takes around 8 minutes.
 Glioma
